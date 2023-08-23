@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/bedroom.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    display: flex;
+    margin: auto;
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 180px;
+    cursor: pointer;
+}
+.menu > li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 20px;
+    font-size: 17px;
+    position: relative;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+/* for the animated underline*/
+.menu li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.menu li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    color: white;
+    text-align: center;
+}
+.content h1{
+    font-size: 80px;
+    margin: 20px;
+}
+.content p{
+    font-size: 30px;
+}
+button{
+    width: 200px;
+    padding: 20px 0px;
+    text-align: center;
+    margin: 50px;
+    border-radius: 50px;
+    border: 2px solid #009688;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+/* for hover effecct add span*/
+span{
+    background: #009688;
+    height: 100%;
+    width: 0%;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
